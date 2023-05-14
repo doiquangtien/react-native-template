@@ -6,10 +6,14 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
+    "podm1": "cd ios && arch -x86_64 pod install",
     "start": "react-native start",
     "test": "jest"
   },
   "dependencies": {
+    "appcenter": "4.4.5",
+    "appcenter-analytics": "4.4.5",
+    "appcenter-crashes": "4.4.5",
     "react": "18.2.0",
     "react-native": "0.71.7",
     "react-native-config": "^1.5.0",
