@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "ios": "react-native run-ios --simulator=\"iPhone 14 Pro\"",
     "lint": "eslint .",
     "podm1": "cd ios && arch -x86_64 pod install",
     "start": "react-native start",

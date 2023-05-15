@@ -10,11 +10,11 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;cp &quot;${PROJECT_DIR}/../.env.development&quot; &quot;${PROJECT_DIR}/../.env&quot;&#10;">
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;cp &quot;${PROJECT_DIR}/../.env.staging&quot; &quot;${PROJECT_DIR}/../.env&quot;&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "5C4A5B542A0B901E004F9708"
+                     BlueprintIdentifier = "5C865B522A121A180067E22C"
                      BuildableName = "AwesomeProjectStaging.app"
                      BlueprintName = "AwesomeProjectStaging"
                      ReferencedContainer = "container:AwesomeProject.xcodeproj">
@@ -32,7 +32,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5C4A5B542A0B901E004F9708"
+               BlueprintIdentifier = "5C865B522A121A180067E22C"
                BuildableName = "AwesomeProjectStaging.app"
                BlueprintName = "AwesomeProjectStaging"
                ReferencedContainer = "container:AwesomeProject.xcodeproj">
@@ -62,7 +62,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5C4A5B542A0B901E004F9708"
+            BlueprintIdentifier = "5C865B522A121A180067E22C"
             BuildableName = "AwesomeProjectStaging.app"
             BlueprintName = "AwesomeProjectStaging"
             ReferencedContainer = "container:AwesomeProject.xcodeproj">
@@ -79,7 +79,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5C4A5B542A0B901E004F9708"
+            BlueprintIdentifier = "5C865B522A121A180067E22C"
             BuildableName = "AwesomeProjectStaging.app"
             BlueprintName = "AwesomeProjectStaging"
             ReferencedContainer = "container:AwesomeProject.xcodeproj">
