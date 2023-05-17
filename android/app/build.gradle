@@ -1,6 +1,14 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
 
+project.ext.envConfigFiles = [
+        staging: ".env.development",
+        production: ".env.production",
+        anothercustombuild: ".env",
+]
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 import com.android.build.OutputFile
 
 /**
@@ -102,6 +110,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        resValue "string", "build_config_package", "com.awesomeproject"
     }
 
     splits {
@@ -119,7 +128,14 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file('production.keystore')
+            storePassword '123456'
+            keyAlias 'production'
+            keyPassword '123456'
+        }
     }
+
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
@@ -127,11 +143,32 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+
+    flavorDimensions "default"
+    productFlavors{
+        staging{
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.awesomeproject.staging"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.awesomeproject"
+            versionCode 1
+            versionName "1.0"
+        }
+        production{
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.awesomeproject.release"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.awesomeproject"
+            versionCode 1
+            versionName "1.0"
+        }
+    }
+
 
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
