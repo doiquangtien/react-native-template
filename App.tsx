@@ -79,6 +79,9 @@ function App(): JSX.Element {
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits. {Config.API_URL}
           </Section>
+          <Section title="React Native Config ENV">
+            <Text style={styles.highlight}>{Config.API_URL}</Text>
+          </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
