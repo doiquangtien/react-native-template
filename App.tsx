@@ -80,7 +80,7 @@ function App(): JSX.Element {
           <Button
             title="Crash"
             onPress={() => {
-              Crash.generateTestCrash();
+              throw new Error('Some Text');
             }}
           />
           <Section title="Step One">
