@@ -5,9 +5,10 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Alert,
   Button,
   SafeAreaView,
   ScrollView,
@@ -18,7 +19,8 @@ import {
   View,
 } from 'react-native';
 import Config from 'react-native-config';
-import Crash from 'appcenter-crashes';
+import Crashes from 'appcenter-crashes';
+import Analytics from 'appcenter-analytics';
 import {
   Colors,
   DebugInstructions,
@@ -62,6 +64,23 @@ function App(): JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+  async function checkPreviousSession() {
+    const didCrash = await Crashes.hasCrashedInLastSession(); // boolean
+    if (didCrash) {
+      const report = await Crashes.lastSessionCrashReport();
+      Alert.alert('Sorry about crash', 'We are working on solution', [
+        {
+          text: 'Cancel',
+          onPress: () => console.log('Cancel Pressed', report),
+          style: 'cancel',
+        },
+      ]);
+    }
+  }
+
+  useEffect(() => {
+    checkPreviousSession();
+  }, []);
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -80,7 +99,13 @@ function App(): JSX.Element {
           <Button
             title="Crash"
             onPress={() => {
-              throw new Error('Some Text');
+              Crashes.generateTestCrash();
+            }}
+          />
+          <Button
+            title="Track Event"
+            onPress={() => {
+              Analytics.trackEvent('track_event_test');
             }}
           />
           <Section title="Step One">
