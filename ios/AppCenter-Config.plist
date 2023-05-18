@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "https://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   AppCenter-Config.plist
+   AwesomeProject
+
+   Created by Đới Quang Tiến on 18/05/2023.
+   Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
+-->
 <plist version="1.0">
-    <dict>
+  <dict>
     <key>AppSecret</key>
-    <string>eb371d71-a8b8-4eda-a2cf-6867d4c2d5ab</string>
-    </dict>
+    <string>a84fffe3-7307-4b18-b429-8cc310314afd</string>
+  </dict>
 </plist>

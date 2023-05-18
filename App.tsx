@@ -8,6 +8,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -17,6 +18,7 @@ import {
   View,
 } from 'react-native';
 import Config from 'react-native-config';
+import Crash from 'appcenter-crashes';
 import {
   Colors,
   DebugInstructions,
@@ -75,6 +77,12 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <Button
+            title="Crash"
+            onPress={() => {
+              Crash.generateTestCrash();
+            }}
+          />
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits. {Config.API_URL}
