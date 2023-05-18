@@ -5811,11 +5811,6 @@ react-native-config@^1.5.0:
   resolved "https://registry.npmjs.org/react-native-config/-/react-native-config-1.5.0.tgz"
   integrity sha512-slecooA/0tCwhb+RuWEbwLqtKirGh9vWPRpgDfH7uPAraCciqHNH2XjS9ylW+Spn4FUrHg5KWTqUGs9BdBADHg==
 
-react-native-flipper@^0.190.0:
-  version "0.190.0"
-  resolved "https://registry.npmjs.org/react-native-flipper/-/react-native-flipper-0.190.0.tgz"
-  integrity sha512-hkVked8cWBVUVZJSAX8GY+B4AaJ/sdYDRqeAcLcQ16kyMzyHxU3PWu27mXTYoRJqA2W85iAIaE1rONYoaEiKnA==
-
 react-native-gradle-plugin@^0.71.17:
   version "0.71.17"
   resolved "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.17.tgz"

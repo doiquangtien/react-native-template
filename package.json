@@ -9,10 +9,10 @@
     "podm1": "cd ios && arch -x86_64 pod install",
     "start": "react-native start",
     "test": "jest",
-    "android-dev":"react-native run-android --variant=stagingDebug --appIdSuffix staging",
-    "android-dev-build":"cd android && ./gradlew clean && ENVFILE=.env.development ./gradlew assembleRelease",
-    "android-release":"react-native run-android --variant=productionDebug --appIdSuffix production",
-    "android-release-build":"cd android && ./gradlew clean && ENVFILE=.env.product ./gradlew assembleRelease"
+    "android-dev": "react-native run-android --variant=stagingDebug --appIdSuffix staging",
+    "android-dev-build": "cd android && ./gradlew clean && ENVFILE=.env.development ./gradlew assembleRelease",
+    "android-release": "react-native run-android --variant=productionDebug --appIdSuffix production",
+    "android-release-build": "cd android && ./gradlew clean && ENVFILE=.env.product ./gradlew assembleRelease"
   },
   "dependencies": {
     "appcenter": "4.4.5",
@@ -20,8 +20,7 @@
     "appcenter-crashes": "4.4.5",
     "react": "18.2.0",
     "react-native": "0.71.7",
-    "react-native-config": "^1.5.0",
-    "react-native-flipper": "^0.190.0"
+    "react-native-config": "^1.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
