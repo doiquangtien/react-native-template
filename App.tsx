@@ -96,6 +96,7 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <Text>Add Feature - 1</Text>
           <Button
             title="Crash"
             onPress={() => {
